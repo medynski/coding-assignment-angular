@@ -26,7 +26,7 @@ You do not have time to implement everything so pick most important requirements
 - install dependencies if something is missing. Your solution should work out of the box after npm install.
 
 
-##Ideal App requirements
+## Ideal App requirements
 
 ### App Skeleton:
 - fix main menu - currently menu items do not expand
