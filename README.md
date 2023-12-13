@@ -32,7 +32,7 @@ You do not have time to implement everything so pick most important requirements
 - fix main menu - currently menu items do not expand
 - add menu responsiveness (behaviour for small screens) - pick your solution
 - add app routing - follow redirectLinks for menu items defined in app.component.ts (`path: ''` should redirect to entities/homepage path where `HomepageComponent` should appear)
-- `EntitiesFeatureListModule` and `EntitiesFeatureLocationDashboardModule` should be Lazy Loaded, inside that modules create proper components for List and dashboard view.
+- `EntitiesFeatureListModule` and `EntitiesFeatureLocationDashboardModule` should be Lazy Loaded, inside that modules create proper components for List and dashboard view (in our system entity means employee).
 
 ### Features:
 
@@ -69,7 +69,7 @@ You do not have time to implement everything so pick most important requirements
 # *********** END OF TASK ***********
 
 
-# AngularMonorepo - default nx starter 
+# AngularMonorepo - default nx starter
 
 <a alt="Nx logo" href="https://nx.dev" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/nrwl/nx/master/images/nx-logo.png" width="45"></a>
 
