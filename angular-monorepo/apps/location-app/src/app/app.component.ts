@@ -2,9 +2,11 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'angular-monorepo-root',
-  template: ` <div class="app-container">
-    <div class="header">
-      <h2 routerLink="/">Great Location App</h2>
+  template: ` <div class="container mx-auto">
+    <div class="flex justify-between items-center bg-slate-400 p-4">
+      <h2 routerLink="/" class="cursor-pointer font-bold">
+        Great Location App
+      </h2>
       <div>
         <p-avatar
           label="KO"
@@ -19,15 +21,13 @@ import { Component } from '@angular/core';
       <div class="menu-container">
         <p-panelMenu [model]="items"></p-panelMenu>
       </div>
-      <div>
+      <div class="p-2.5">
         <router-outlet></router-outlet>
       </div>
     </div>
   </div>`,
 })
 export class AppComponent {
-  title = 'location-app';
-
   items = [
     {
       label: 'Entities',
