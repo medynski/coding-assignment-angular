@@ -26,7 +26,7 @@ You do not have time to implement everything so pick most important requirements
 - all views should be responsive up to 320px (mobile small)
 - for charts use highcharts-angular (https://github.com/highcharts/highcharts-angular) (if you prefer use other solution of your choice)
 - install dependencies if something is missing. Your solution should work out of the box after npm install.
-- if you use different components or icons library then for specific components like PrimeNG Table mentioned below use similar components from liblary of your choice.
+- if you use different components or icons library then for specific components like PrimeNG Table mentioned below use similar components from library of your choice.
 
 
 ## Ideal App requirements
