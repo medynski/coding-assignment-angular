@@ -1,3 +1,4 @@
+import { EntitiesDataRepositoryModule } from '@angular-monorepo/entities/data-repository';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -62,12 +63,13 @@ export const appRoutes: Route[] = [
 @NgModule({
   declarations: [AppComponent],
   imports: [
-    BrowserModule,
-    AvatarModule,
-    PanelMenuModule,
-    BadgeModule,
     AvatarGroupModule,
+    AvatarModule,
+    BadgeModule,
     BrowserAnimationsModule,
+    BrowserModule,
+    EntitiesDataRepositoryModule,
+    PanelMenuModule,
     RouterModule.forRoot(appRoutes, { initialNavigation: 'enabledBlocking' }),
   ],
   providers: [],

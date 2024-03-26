@@ -3,6 +3,8 @@ The goal of this assignment is to test your coding style, ability to work with l
 
 After task completion we will discuss your solution together during the interview and talk about the decisions you have made and solutions you proposed.
 
+Do not create PR to this repository. Create your own repository using this template repository!
+
 
 ## Getting Started
 
@@ -24,6 +26,7 @@ You do not have time to implement everything so pick most important requirements
 - all views should be responsive up to 320px (mobile small)
 - for charts use highcharts-angular (https://github.com/highcharts/highcharts-angular) (if you prefer use other solution of your choice)
 - install dependencies if something is missing. Your solution should work out of the box after npm install.
+- if you use different components or icons library then for specific components like PrimeNG Table mentioned below use similar components from library of your choice.
 
 
 ## Ideal App requirements
@@ -69,7 +72,7 @@ You do not have time to implement everything so pick most important requirements
 # *********** END OF TASK ***********
 
 
-# AngularMonorepo - default nx starter 
+# AngularMonorepo - default nx starter
 
 <a alt="Nx logo" href="https://nx.dev" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/nrwl/nx/master/images/nx-logo.png" width="45"></a>
 

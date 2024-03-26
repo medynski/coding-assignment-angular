@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'angular-monorepo-root',
-  template: ` <div class="container mx-auto">
+  template: ` <div class="container mx-auto flex flex-col h-screen">
     <div class="flex justify-between items-center bg-slate-400 p-4">
       <h2 routerLink="/" class="cursor-pointer font-bold">
         Great Location App
@@ -17,8 +17,8 @@ import { Component } from '@angular/core';
         ></p-avatar>
       </div>
     </div>
-    <div class="main-container">
-      <div class="menu-container">
+    <div class="flex h-full">
+      <div class="bg-blue-100">
         <p-panelMenu [model]="items"></p-panelMenu>
       </div>
       <div class="p-2.5">

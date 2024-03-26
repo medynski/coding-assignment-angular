@@ -1,5 +1,6 @@
+import { EntityService } from '@angular-monorepo/entities/data-repository';
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 
 @Component({
   selector: 'angular-monorepo-entities-feature-list',
@@ -7,4 +8,12 @@ import { Component } from '@angular/core';
   standalone: true,
   imports: [CommonModule],
 })
-export class EntitiesFeatureListComponent {}
+export class EntitiesFeatureListComponent {
+  entityService = inject(EntityService);
+
+  constructor() {
+    this.entityService
+      .getEntityList({ name: '', search: '' })
+      .subscribe(console.warn);
+  }
+}
