@@ -1,1 +1,1 @@
-export * from './lib/entities-feature-list.module';
+export * from './lib/entities-feature-list.component';

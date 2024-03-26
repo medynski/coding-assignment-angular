@@ -2,7 +2,11 @@
   "name": "@angular-monorepo/source",
   "version": "0.0.0",
   "license": "MIT",
-  "scripts": {},
+  "scripts": {
+    "start": "nx serve location-app",
+    "test": "nx test location-app",
+    "build": "nx build location-app"
+  },
   "private": true,
   "dependencies": {
     "@angular/animations": "~16.2.0",
