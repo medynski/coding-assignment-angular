@@ -22,22 +22,22 @@ export const appRoutes: Route[] = [
         path: 'homepage',
         loadComponent: () =>
           import('@angular-monorepo/entities/feature-homepage').then(
-            (mod) => mod.EntitiesFeatureHomepageComponent
+            (mod) => mod.EntitiesFeatureHomepageComponent,
           ),
       },
       {
         path: 'list',
         loadComponent: () =>
           import('@angular-monorepo/entities/feature-list').then(
-            (mod) => mod.EntitiesFeatureListComponent
+            (mod) => mod.EntitiesFeatureListComponent,
           ),
       },
 
       {
         path: 'detail/:id',
         loadComponent: () =>
-          import('@angular-monorepo/entities/feature-list').then(
-            (mod) => mod.EntitiesFeatureListComponent
+          import('@angular-monorepo/entities/feature-entity-details').then(
+            (mod) => mod.EntitiesFeatureEntityDetailsComponent,
           ),
       },
     ],
@@ -49,7 +49,7 @@ export const appRoutes: Route[] = [
         path: 'location',
         loadComponent: () =>
           import('@angular-monorepo/entities/feature-location-dashboard').then(
-            (mod) => mod.EntitiesFeatureLocationDashboardComponent
+            (mod) => mod.EntitiesFeatureLocationDashboardComponent,
           ),
       },
     ],

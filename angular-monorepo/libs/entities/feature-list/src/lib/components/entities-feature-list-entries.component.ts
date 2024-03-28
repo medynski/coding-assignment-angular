@@ -1,9 +1,11 @@
-import { EntityListItem } from '@angular-monorepo/entities/data-repository';
+import {
+  EntityListItem,
+  Nullable,
+} from '@angular-monorepo/entities/data-repository';
 import { CommonModule } from '@angular/common';
 import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { columns, EntityListColumn } from './../model/entity-list-column';
-import { Nullable } from './../types/nullable';
 
 @Component({
   selector: 'angular-monorepo-entities-feature-list-entries',

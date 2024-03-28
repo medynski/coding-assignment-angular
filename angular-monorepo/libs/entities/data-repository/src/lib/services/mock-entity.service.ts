@@ -1,5 +1,6 @@
+import { HttpErrorResponse } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable, of } from 'rxjs';
+import { Observable, of, throwError } from 'rxjs';
 import {
   Employee,
   EntityDetails,
@@ -129,7 +130,6 @@ export class MockEntityService {
     search,
     name,
   }: GetEntityListParams): Observable<EntityListItem[]> {
-    console.warn({ search, name });
     return of(
       this.entities.filter((entity) => {
         const conditionTrackingId = search
@@ -142,34 +142,28 @@ export class MockEntityService {
   }
 
   getEntityDetails(entityId: string): Observable<EntityDetails> {
-    return of({
-      entityId: '',
-      trackingId: '',
-      name: '',
-      entityType: '',
-      entityStatus: '',
-      isActive: false,
-      attributes: [],
-    }).pipe(delayedResponse());
+    const entity = this.entities.find((entity) => entity.entityId === entityId);
+    const output: Observable<EntityDetails> = entity
+      ? of(entity)
+      : throwError(() => new HttpErrorResponse({ status: 404 }));
+
+    return output.pipe(delayedResponse());
   }
 
   updateEntity(
     entityUpdateDto: EntityUpdateDto,
     entityId: string,
   ): Observable<EntityDetails> {
-    return of({
-      entityId: '',
-      trackingId: '',
-      name: '',
-      entityType: '',
-      entityStatus: '',
-      isActive: false,
-      attributes: [],
-    });
+    const entity = this.entities.find((entity) => entity.entityId === entityId);
+    const output: Observable<EntityDetails> = entity
+      ? of({ ...entity, ...entityUpdateDto })
+      : throwError(() => new HttpErrorResponse({ status: 404 }));
+
+    return output.pipe(delayedResponse());
   }
 
   getEntityTypes(): Observable<EntityType[]> {
-    return of([]).pipe(delayedResponse());
+    return of(this.entityTypes).pipe(delayedResponse());
   }
 
   getLocationStats(): Observable<LocationStats> {

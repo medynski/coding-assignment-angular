@@ -1,5 +1,5 @@
+import { Nullable } from '@angular-monorepo/entities/data-repository';
 import { Injectable } from '@angular/core';
-import { Nullable } from '../types/nullable';
 
 @Injectable({
   providedIn: 'root',

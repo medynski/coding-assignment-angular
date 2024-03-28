@@ -1,3 +1,4 @@
+import { Nullable } from '@angular-monorepo/entities/data-repository';
 import { CommonModule } from '@angular/common';
 import {
   ChangeDetectionStrategy,
@@ -13,7 +14,6 @@ import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
 import { MultiSelectModule } from 'primeng/multiselect';
 import { debounceTime, distinctUntilChanged } from 'rxjs';
 import { columns, EntityListColumn } from '../model/entity-list-column';
-import { Nullable } from '../types/nullable';
 import { LocalStorageService } from '../utils/local-storage.service';
 
 const LOCAL_STORAGE_KEY = 'visibleColumns';

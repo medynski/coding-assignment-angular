@@ -2,6 +2,7 @@ import {
   EntityListItem,
   EntityService,
   handleError,
+  Nullable,
 } from '@angular-monorepo/entities/data-repository';
 import { CommonModule } from '@angular/common';
 import {
@@ -15,7 +16,6 @@ import { combineLatest, switchMap } from 'rxjs';
 import { EntitiesFeatureListEntriesComponent } from './components/entities-feature-list-entries.component';
 import { EntitiesFeatureListFiltersComponent } from './components/entities-feature-list-filters.component';
 import { columns, EntityListColumn } from './model/entity-list-column';
-import { Nullable } from './types/nullable';
 
 @Component({
   selector: 'angular-monorepo-entities-feature-list',
@@ -42,13 +42,12 @@ import { Nullable } from './types/nullable';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class EntitiesFeatureListComponent {
-  readonly columns = columns;
-  readonly entityService = inject(EntityService);
-  readonly visibleColumns = signal<Nullable<EntityListColumn[]>>([]);
-
+  private readonly entityService = inject(EntityService);
   private searchName = signal<Nullable<string>>(null);
   private searchTrackingId = signal<Nullable<string>>(null);
 
+  readonly columns = columns;
+  readonly visibleColumns = signal<Nullable<EntityListColumn[]>>([]);
   readonly entities = toSignal(
     combineLatest([
       toObservable(this.searchName),

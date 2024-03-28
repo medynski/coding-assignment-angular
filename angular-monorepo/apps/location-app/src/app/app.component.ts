@@ -8,15 +8,21 @@ import { Component } from '@angular/core';
         Great Location App
       </h2>
       <div class="relative">
-          <img class="w-10 h-10 rounded" src="https://flowbite.com/docs/images/people/profile-picture-5.jpg" alt="">
-          <span class="absolute top-0 left-8 transform -translate-y-1/2 w-3.5 h-3.5 bg-red-400 border-2 border-slate-400 rounded-full"></span>
+        <img
+          class="w-10 h-10 rounded"
+          src="https://flowbite.com/docs/images/people/profile-picture-5.jpg"
+          alt=""
+        />
+        <span
+          class="absolute top-0 left-8 transform -translate-y-1/2 w-3.5 h-3.5 bg-red-400 border-2 border-slate-400 rounded-full"
+        ></span>
       </div>
     </div>
     <div class="flex h-full">
       <div class="bg-blue-100">
         <p-panelMenu [model]="items"></p-panelMenu>
       </div>
-      <div class="p-2.5">
+      <div class="p-5">
         <router-outlet></router-outlet>
       </div>
     </div>
