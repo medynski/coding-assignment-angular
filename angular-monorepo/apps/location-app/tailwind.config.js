@@ -5,13 +5,11 @@ const { join } = require('path');
 module.exports = {
   content: [
     join(__dirname, 'src/**/!(*.stories|*.spec).{ts,html}'),
+    join(__dirname, './../../libs/**/!(*.stories|*.spec).{ts,html}'),
     ...createGlobPatternsForDependencies(__dirname),
   ],
   theme: {
     extend: {},
   },
   plugins: [],
-  purge: {
-    content: ['./apps/**/src/**/*.{html,ts}', './libs/**/*.html'],
-  },
 };

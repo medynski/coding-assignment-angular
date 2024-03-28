@@ -125,10 +125,20 @@ export class MockEntityService {
     { id: 'id1', name: 'Jacob Holland' },
   ];
 
-  getEntityList(
-    getEntityListParams: GetEntityListParams
-  ): Observable<EntityListItem[]> {
-    return of(this.entities).pipe(delayedResponse());
+  getEntityList({
+    search,
+    name,
+  }: GetEntityListParams): Observable<EntityListItem[]> {
+    console.warn({ search, name });
+    return of(
+      this.entities.filter((entity) => {
+        const conditionTrackingId = search
+          ? entity.trackingId?.includes(search)
+          : true;
+        const conditionName = name ? entity.name.includes(name) : true;
+        return conditionTrackingId && conditionName;
+      }),
+    ).pipe(delayedResponse());
   }
 
   getEntityDetails(entityId: string): Observable<EntityDetails> {
@@ -145,7 +155,7 @@ export class MockEntityService {
 
   updateEntity(
     entityUpdateDto: EntityUpdateDto,
-    entityId: string
+    entityId: string,
   ): Observable<EntityDetails> {
     return of({
       entityId: '',

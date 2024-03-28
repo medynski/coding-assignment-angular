@@ -7,14 +7,9 @@ import { Component } from '@angular/core';
       <h2 routerLink="/" class="cursor-pointer font-bold">
         Great Location App
       </h2>
-      <div>
-        <p-avatar
-          label="KO"
-          pBadge
-          styleClass="mr-5"
-          value="4"
-          [style]="{ 'background-color': '#4caf4f', color: '#ffffff' }"
-        ></p-avatar>
+      <div class="relative">
+          <img class="w-10 h-10 rounded" src="https://flowbite.com/docs/images/people/profile-picture-5.jpg" alt="">
+          <span class="absolute top-0 left-8 transform -translate-y-1/2 w-3.5 h-3.5 bg-red-400 border-2 border-slate-400 rounded-full"></span>
       </div>
     </div>
     <div class="flex h-full">

@@ -2,8 +2,8 @@ import { HttpErrorResponse } from '@angular/common/http';
 import { delay, map, MonoTypeOperatorFunction, pipe } from 'rxjs';
 
 export function delayedResponse<T>(
-  delayMs = 1000,
-  failureRate = 0.1
+  delayMs = 10, // @todo: change to 1000 after development (change related to task requirements)
+  failureRate = 0.1,
 ): MonoTypeOperatorFunction<T> {
   return pipe(
     delay(delayMs),
@@ -12,6 +12,6 @@ export function delayedResponse<T>(
         throw new HttpErrorResponse({ status: 403 });
       }
       return value;
-    })
+    }),
   );
 }
