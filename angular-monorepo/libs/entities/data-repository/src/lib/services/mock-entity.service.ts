@@ -11,6 +11,7 @@ import {
   LocationStats,
 } from '../model/model';
 import { delayedResponse } from '../utils/delayedResponse';
+import { mapLastWeekEmployeesVisits } from '../utils/mappers/mapLastWeekEmployeesVisits';
 
 @Injectable()
 export class MockEntityService {
@@ -168,8 +169,10 @@ export class MockEntityService {
 
   getLocationStats(): Observable<LocationStats> {
     return of({
-      lastWeekLocationOccupancy: [],
-      lastWeekEmployeesVisits: [],
+      lastWeekLocationOccupancy: this.lastWeekLocationOccupancy,
+      lastWeekEmployeesVisits: mapLastWeekEmployeesVisits(
+        this.lastWeekVisitsLog,
+      ),
     }).pipe(delayedResponse());
   }
 }

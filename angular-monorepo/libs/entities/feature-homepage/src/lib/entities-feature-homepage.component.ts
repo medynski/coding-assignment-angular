@@ -22,10 +22,6 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
         Dependencies are up-to-date, "found 0 vulnerabilities" as and outcome
         from "npm audit", the newest angular/nx is on the board
       </li>
-      <li>
-        Web accessibility is in good shape (aria-attr implemented, semantic HTML
-        used, contrast ratio is fine)
-      </li>
       <li>Implemented a consistent styling approach by using tailwind css</li>
       <li>
         The application is built on top of cutting-edge functionalities from the
