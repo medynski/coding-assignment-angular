@@ -26,13 +26,28 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
       <li>
         The application is built on top of cutting-edge functionalities from the
         newest angular version (NOTICE: Of course, I know how to write the code
-        based on older ng versions - you can find some samples in my github
-        repository)
+        based on older ng versions - you can find some samples in my
+        <a
+          class="text-blue-600  hover:underline hover:cursor-pointer"
+          href="https://github.com/medynski/angular-online-code-editor"
+          alt="an old code sample"
+          >github repository</a
+        >)
       </li>
     </ul>
 
     <p class="py-2.5">Future consideration:</p>
     <ul class="list-disc ml-10">
+      <li>Fix all "todo" left in the code</li>
+      <li>
+        Make charts responsive (it needs to be done
+        <a
+          class="text-blue-600  hover:underline hover:cursor-pointer"
+          href="https://www.highcharts.com/demo/stock/responsive"
+          alt="check"
+          >programmatically</a
+        >)
+      </li>
       <li>Cover the code by automated tests</li>
       <li>
         Prepare a global interceptor and handler for API requests (at least to

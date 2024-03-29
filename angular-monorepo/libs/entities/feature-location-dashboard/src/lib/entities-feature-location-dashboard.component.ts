@@ -31,8 +31,8 @@ const WEEKDAYS = [
   template: `<main>
     @if (stats()) {
       <div class="flex  w-full flex-col lg:w-10/12 lg:flex-row">
-        <div class="w-1/2">
-          <div class="scale-75">
+        <div class="w-full lg:w-1/2">
+          <div class="lg:scale-75">
             <highcharts-chart
               [Highcharts]="Highcharts"
               [options]="occupancyChartOptions"
@@ -41,8 +41,8 @@ const WEEKDAYS = [
             </highcharts-chart>
           </div>
         </div>
-        <div class="w-1/2">
-          <div class="scale-75">
+        <div class="w-full lg:w-1/2">
+          <div class="lg:scale-75">
             <highcharts-chart
               [Highcharts]="Highcharts"
               [options]="visitsChartOptions"

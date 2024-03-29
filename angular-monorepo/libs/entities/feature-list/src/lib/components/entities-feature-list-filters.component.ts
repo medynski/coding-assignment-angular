@@ -22,8 +22,8 @@ const DEBOUNCE_TIME = 500;
 @Component({
   selector: 'angular-monorepo-entities-feature-list-filters',
   template: `
-    <section class="flex flex-row mb-5" [formGroup]="formGroup">
-      <div class="flex flex-col pr-2.5">
+    <section class="flex flex-col lg:flex-row mb-2.5" [formGroup]="formGroup">
+      <div class="flex flex-col lg:pr-2.5 lg:w-1/3 w-full mb-2.5">
         <div>Visible columns:</div>
         <p-multiSelect
           [options]="columns"
@@ -31,26 +31,26 @@ const DEBOUNCE_TIME = 500;
           optionLabel="label"
           placeholder="Select columns"
           [filter]="false"
-          styleClass="border rounded border-solid"
+          styleClass="border rounded border-solid w-full"
         ></p-multiSelect>
       </div>
 
-      <div class="flex flex-col px-2.5">
+      <div class="flex flex-col lg:px-2.5 lg:w-1/3 w-full mb-2.5">
         <div>Search by name:</div>
         <div class="border rounded border-solid h-[50px]">
           <input
-            class="p-2.5 outline-none"
+            class="p-2.5 outline-none block"
             type="text"
             formControlName="searchName"
           />
         </div>
       </div>
 
-      <div class="flex flex-col pl-2.5">
+      <div class="flex flex-col lg:pl-2.5 lg:w-1/3 w-full mb-2.5">
         <div>Search by trackingId:</div>
         <div class="border rounded border-solid h-[50px]">
           <input
-            class="p-2.5 outline-none"
+            class="p-2.5 outline-none block"
             type="text"
             formControlName="searchTrackingId"
           />
