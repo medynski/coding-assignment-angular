@@ -73,7 +73,3 @@ You do not have time to implement everything so pick most important requirements
 
 
 # *********** END OF TASK ***********
-
-- [Join the community](https://nx.dev/community)
-- [Subscribe to the Nx Youtube Channel](https://www.youtube.com/@nxdevtools)
-- [Follow us on Twitter](https://twitter.com/nxdevtools)
