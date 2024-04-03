@@ -1,6 +1,6 @@
 # Angular Coding Assignment
 
-**Notice: To see my solution to the problem described below [follow this URL](https://github.com/medynski/coding-assignment-angular/pull/1) **
+> Notice: To see my solution to the problem described below [follow this URL](https://github.com/medynski/coding-assignment-angular/pull/1)
 
 The goal of this assignment is to test your coding style, ability to work with libraries/frameworks documentation and to develop features using Angular.
 
