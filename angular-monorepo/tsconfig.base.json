@@ -10,11 +10,17 @@
     "importHelpers": true,
     "target": "es2015",
     "module": "esnext",
-    "lib": ["es2020", "dom"],
+    "lib": [
+      "es2020",
+      "dom"
+    ],
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@angular-monorepo/entities/feature-entity-details": [
+        "libs/entities/feature-entity-details/src/index.ts"
+      ],
       "@angular-monorepo/entities/data-repository": [
         "libs/entities/data-repository/src/index.ts"
       ],
@@ -26,8 +32,11 @@
       ],
       "@angular-monorepo/entities/feature-location-dashboard": [
         "libs/entities/feature-location-dashboard/src/index.ts"
-      ],
+      ]
     }
   },
-  "exclude": ["node_modules", "tmp"]
+  "exclude": [
+    "node_modules",
+    "tmp"
+  ]
 }

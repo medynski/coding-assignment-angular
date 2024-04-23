@@ -1,1 +1,1 @@
-export * from './lib/entities-feature-location-dashboard.module';
+export * from './lib/entities-feature-location-dashboard.component';
