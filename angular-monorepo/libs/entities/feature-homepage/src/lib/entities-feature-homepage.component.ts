@@ -19,7 +19,7 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
     </p>
     <ul class="list-disc ml-10">
       <li>
-        Dependencies are up-to-date, "found 0 vulnerabilities" as and outcome
+        Dependencies are up-to-date, "found 0 vulnerabilities" as an outcome
         from "npm audit", the newest angular/nx is on the board
       </li>
       <li>Implemented a consistent styling approach by using tailwind css</li>
